@@ -4,4 +4,106 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+}
+
+.navColor {
+  background: white;
+  box-shadow: 0 0.5rem 0.5rem #aaa5a5;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.fontStyle {
+  font-family: "sonsie one";
+  font-size: 18px;
+  font-weight: 900;
+  color: rgba(31, 58, 59, 0.884);
+}
+
+.fontStyleMenu {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: black;
+  opacity: 1;
+}
+.fontStyleMenu:hover {
+  opacity: 0.7;
+}
+
+.menuBox {
+  border: none;
+}
+.menuBox:focus {
+  box-shadow: none;
+}
+
+.carouselStyle {
+  max-height: 600px;
+}
+
+.carousel-item {
+  overflow: hidden;
+  max-height: 600px;
+}
+
+.imgCarousel {
+  opacity: 0.8 !important;
+}
+
+.indicadoresCarousel {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+}
+
+.textCarousel {
+  font-family: "sonsie one";
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(31, 58, 59, 0.884);
+}
+
+.carousel-caption {
+  height: 100%;
+  left: 0px;
+  top: 0;
+  padding: 220px 45px;
+  text-align: center;
+  width: 340px;
+}
+
+.carouselTextSec {
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+.boton {
+  font-weight: 900;
+}
+
+.tit {
+  font-family: "sonsie one";
+  font-size: 30px;
+  color: #b86d71;
+}
+
+.textBen {
+  color: #18835f;
+}
+
+.textIdea {
+  font-family: "Manrope";
+}
+
 /*# sourceMappingURL=style.css.map */

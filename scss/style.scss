@@ -3,3 +3,101 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Manrope', sans-serif;
+}
+//nav
+.navColor{
+    //background: linear-gradient(to right, rgb(153, 149, 145), rgb(252, 252, 252));
+    background: white;
+    box-shadow: 0 0.5rem 0.5rem rgb(170, 165, 165);
+}
+.logo{
+    margin-right: 10px;
+}
+
+.fontStyle{
+    font-family: 'sonsie one';
+    font-size: 18px;
+    font-weight:900;
+    color: rgba(31, 58, 59, 0.884);
+}
+.fontStyleMenu{
+    font-size: 12px;
+    font-weight:900;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    &:hover{
+        opacity: 0.70;
+    }
+}
+.menuBox{
+    border: none;
+    &:focus{
+        box-shadow: none;
+    }
+}
+//carousel
+.carouselStyle{
+    max-height: 600px;
+    
+}
+.carousel-item{
+    overflow: hidden;
+    max-height: 600px;
+    
+}
+.imgCarousel{
+    opacity: 0.80 !important;
+}
+.indicadoresCarousel{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100%;
+}
+.textCarousel{
+    font-family: 'sonsie one';
+    font-size: 60px;
+    font-weight: 900;
+    //color: rgb(49, 68, 177)
+    color: rgba(31, 58, 59, 0.884);
+    
+}
+.carousel-caption{
+    
+    height: 100%;
+    left: 0px; 
+    top: 0;
+    padding: 220px 45px ;
+    text-align: center;
+    width: 340px;
+
+}
+.carouselTextSec{
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+}
+.boton{
+    font-weight: 900;
+}
+//beneficios
+.tit{
+    font-family: 'sonsie one';
+    font-size:30px;
+    color: rgb(184, 109, 113);
+}
+.textBen{
+    color:rgb(24, 131, 95);
+}
+//presentacion
+.textIdea{
+    font-family: 'Manrope';
+
+}
