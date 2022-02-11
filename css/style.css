@@ -57,7 +57,7 @@ body {
 }
 
 .imgCarousel {
-  opacity: 0.8 !important;
+  opacity: 0.9 !important;
 }
 
 .indicadoresCarousel {
@@ -98,12 +98,59 @@ body {
   color: #b86d71;
 }
 
-.textBen {
+.textPres {
   color: #18835f;
 }
 
-.textIdea {
-  font-family: "Manrope";
+.backColor {
+  background: linear-gradient(to bottom, #299999, #dfdfdf);
+  padding-top: 20px;
+}
+
+.containerOp {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+
+.titOp {
+  letter-spacing: 2px;
+}
+
+.imgText {
+  width: 80%;
+  height: 100px;
+  display: block;
+  text-align: center;
+  padding: 30% 5%;
+  background: gray;
+  color: white;
+  border-radius: 10px;
+}
+
+.persona {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.personaOp {
+  font-size: 14px;
+}
+
+.singleBox {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.imgArea {
+  position: absolute;
+  width: 30%;
+  height: 100px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  top: 15px;
+  left: 100px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
