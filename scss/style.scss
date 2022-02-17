@@ -98,46 +98,24 @@ body{
 }
 //opiniones
 .backColor{
-    background:linear-gradient(to bottom, rgb(41, 153, 153),rgb(223, 223, 223));
-    padding-top: 20px;
-}
-.containerOp{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 60px;
+    background:rgb(41, 153, 153);
+    
 }
 .titOp{
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
-.imgText{
-    width: 80%;
-    height: 100px;
-    display: block;
-    text-align: center;
-    padding: 30% 5%;
-    background: gray;
-    color: white;
-    border-radius: 10px;
-}
+
 .persona{
     font-size: 25px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 .personaOp{
     font-size: 14px;
 }
-.singleBox{
-    position: relative;
-    margin-bottom: 30px;
-
+.controlPrev{
+    margin-left: -20px;
 }
-.imgArea{
-    position:absolute;
-    width: 30%;
-    height: 100px;
-    border: 2px solid #fff;
-    overflow: hidden;
-    top: 15px;
-    left: 100px;
-    border-radius: 50%;
+.controlNex{
+    margin-right: -20px;
 }
