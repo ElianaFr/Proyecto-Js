@@ -1,51 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- font family--------------------------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Clases</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!------------------ bootstrap------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <!-----------------------link css--------------->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Yoga Pocket</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top navColor ">
+    <header> 
+        <!--nav----------------------------->
+        <nav class="navbar navbar-expand-lg fixed-top navColor">
             <div class="container-fluid ">
-                <a class="navbar-brand fontStyle" href="">YOGA POCKET</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                    </button>
+                <a class="navbar-brand m-0 p-0 "  href="/index.html"> 
+                    <svg id="logo-36" width="28"  height="28" class="logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.9523 11.0726C18.5586 7.69873 18.1429 4.13644 18.1429 0H21.8571C21.8571 4.08998 21.4434 7.64774 21.0502 11.0254C20.7299 13.778 20.4235 16.411 20.3666 19.115C22.2316 17.1697 23.863 15.107 25.572 12.9463C27.6791 10.2823 29.9043 7.46945 32.829 4.54464L35.4554 7.17104C32.5633 10.0631 29.7547 12.2861 27.0884 14.3966L27.0859 14.3985C24.9141 16.1178 22.8365 17.7624 20.885 19.6334C23.579 19.5765 26.1911 19.2717 28.9272 18.9524C32.3011 18.5586 35.8636 18.1429 40 18.1429V21.8571C35.9102 21.8571 32.3524 21.4432 28.9749 21.0502L28.9724 21.05C26.2204 20.7298 23.5882 20.4236 20.885 20.3666C22.829 22.2302 24.8906 23.8609 27.0499 25.5687L27.0533 25.5716C29.7174 27.6789 32.5304 29.9039 35.4554 32.829L32.829 35.4554C29.9369 32.5634 27.714 29.755 25.6038 27.0889L25.5988 27.082L25.5946 27.0765C23.8775 24.9081 22.2349 22.8338 20.3666 20.885C20.4235 23.589 20.7299 26.222 21.0502 28.9746C21.4434 32.3523 21.8571 35.91 21.8571 40H18.1429C18.1429 35.8636 18.5586 32.3013 18.9523 28.9274L18.9531 28.9219C19.272 26.1877 19.5765 23.5772 19.6334 20.885C17.7651 22.8338 16.1225 24.9081 14.4054 27.0765L14.4012 27.082L14.3962 27.0889C12.286 29.755 10.0631 32.5634 7.17104 35.4554L4.54464 32.829C7.46959 29.9039 10.2826 27.6789 12.9467 25.5716L12.9501 25.5687C15.1094 23.8609 17.171 22.2302 19.115 20.3666C16.411 20.4237 13.7779 20.73 11.0251 21.0502C7.6476 21.4432 4.08984 21.8571 0 21.8571V18.1429C4.13644 18.1429 7.69894 18.5586 11.0728 18.9524C13.8089 19.2717 16.421 19.5765 19.115 19.6334C17.1627 17.7617 15.0843 16.1166 12.9116 14.3966C10.2453 12.2861 7.43666 10.0631 4.54464 7.17104L7.17104 4.54464C10.0957 7.46945 12.3209 10.2823 14.428 12.9463C16.137 15.1069 17.7684 17.1696 19.6334 19.1148C19.5765 16.4227 19.272 13.8123 18.9531 11.0781L18.9523 11.0726Z" class="ccustom" fill="#FFA589"></path> </svg> 
+                    <spam class="fontStyle">Yoga Pocket</spam>
+                </a>
+                <button class="navbar-toggler menuBox" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="../img/menu.png">
+                </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0  ">
                         <li class="nav-item  ">
-                            <a class="nav-link  fontStyleMenu" aria-current="page" href="#">INICIO</a>
+                            <a class="nav-link text-dark mt-1 fontStyleMenu" aria-current="page" href="/index.html">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CLASES</a>
+                            <a class="nav-link text-dark mt-1 fontStyleMenu" href="/pages/clases.html">CLASES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CARRITO</a>
+                            <a class="nav-link text-dark fontStyleMenu" href="/pages/carrito.html">
+                                <box-icon type='solid' name='cart' class="mb-1"></box-icon>
+                                
+                            </a>
                         </li>
                         
                     </ul>
-                    <div class="d-grid gap-2 d-md-flex ms-auto justify-content-md-end">
-                        <button type="button" class="btn btn-outline-warning btn-sm">LOG IN</button>
+                        <a href="/pages/sesion.html" >
+                            <box-icon name='log-in-circle' class="mb-1" ></box-icon>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
         </nav>
-
-        <main></main>
     </header>
+    <main>
+        <!-------------------------carousel-------presentacion------->
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active indicadoresCarousel" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class= "indicadoresCarousel aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="indicadoresCarousel" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner carouselStyle position-relative ">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="../img/slide1.jpg" class="d-block w-100 imgCarousel "  alt="mujer y perro yoga">
+                <div class="carousel-caption d-none d-lg-block carouselText">
+                    <h2 class="textCarousel">YOGA POCKET</h2>
+                    <p class="carouselTextSec">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="../pages/clases.html" class="btn btn-primary boton">
+                        COMPRAR
+                    </a>
+                </div>
+                </div>
+                <div class="carousel-item " data-bs-interval="2000">
+                    <img src="../img/slide2.jpg" class="d-block w-100 imgCarousel" alt="yoga en la playa">
+                    <div class="carousel-caption d-none d-lg-block carouselText">
+                        <h2 class="textCarousel">YOGA POCKET</h2>
+                        <p class="carouselTextSec">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="../pages/clases.html" class="btn btn-primary boton">
+                            Comprar
+                        </a>
+                    </div>    
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../img/slide3.jpg" class="d-block w-100 imgCarousel" alt="yoga en la playa">
+                    <div class="carousel-caption d-none d-lg-block carouselText">
+                        <h2 class="textCarousel">YOGA POCKET</h2>
+                        <p class="carouselTextSec">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <a href="../pages/clases.html" class="btn  btn-primary boton">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-----------------------presentacion de packs-------------------->
+        <section class="backColor">
+            <div class="container ">
+                <div class="row text-center">
+                    <h1 class="display-3 fw-bold text-light mt-3">Nuestra modalidad</h1>
+                    <hr class="mt-0" >
+                </div>
+                
+                <div class="row pt-2 pb-2 mt-0 mb-3">
+                    <div class="col-md-6 borderDer">
+                        <div class="gb-white p-3">
+                            <h2 class="fw-bold text-capitalize text-center">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Accusamus, facilis.
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=" p-4 text-start">
+                            <p class="fw-light ">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Exercitationem, totam doloribus veritatis inventore dolores
+                                asperiores odit, id, consequatur quaerat cupiditate minima
+                                neque illo illum. Repudiandae.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-------------------------packs para compra------------------>
+        <section>
+            <div class="container py-5">
+                <div class="row justify-content-center mb-1">
+                    <div class="col-md-12 col-xl-10">
+                        <div class="card shadow-6 border rounded-3" >
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                        <div class="bg-image">
+                                            <img src="../img/pres3.jpg" class=" w-100 border rounded-2">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                        <h5>Pack de 10 posiciones- Nivel Inicial</h5>
+                                        <div class="d-flex flex-row">
+                                            <div  class=" mb-1 me-2">
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                            </div>
+                                            <div>
+                                                <span>289</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="mt-1 mb-0 text-muted small">
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, veniam!
+                                                Lorem, ipsum dolor sit amet consectetu.                                           
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="d-flex flex-row align-items-center mb-1">
+                                            <h4 class="mb-1 me-1">$ 1500.-</h4>
+                                            <span class="text-danger"><s>$ 2000.-</s></span>
+                                        </div>
+                                        <h6 class="text-success">Disponible en todas las plataformas</h6>
+                                        <div class="d-flex flex-column mt-4">
+                                            <button class="btn btn-primary btn-sm" type="button">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5">
+                <div class="row justify-content-center mb-1">
+                    <div class="col-md-12 col-xl-10">
+                        <div class="card shadow-5 border rounded-3" >
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                        <div class="bg-image">
+                                            <img src="../img/presmedio.jpg" class=" w-100 border rounded-2">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                        <h5>Pack de 10 posiciones- Nivel Medio</h5>
+                                        <div class="d-flex flex-row">
+                                            <div  class=" mb-1 me-2">
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                            </div>
+                                            <div>
+                                                <span>308</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="mt-1 mb-0 text-muted small">
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, veniam!
+                                                Lorem, ipsum dolor sit amet consectetu.                                           
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="d-flex flex-row align-items-center mb-1">
+                                            <h4 class="mb-1 me-1">$ 2000.-</h4>
+                                            <span class="text-danger"><s>$ 2500.-</s></span>
+                                        </div>
+                                        <h6 class="text-success">Disponible en todas las plataformas</h6>
+                                        <div class="d-flex flex-column mt-4">
+                                            <button class="btn btn-primary btn-sm" type="button">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5">
+                <div class="row justify-content-center mb-1">
+                    <div class="col-md-12 col-xl-10">
+                        <div class="card shadow-5 border rounded-3" >
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                        <div class="bg-image">
+                                            <img src="../img/pres5.jpg" class=" w-100 border rounded-2">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                        <h5>Pack de 10 posiciones- Nivel Experto</h5>
+                                        <div class="d-flex flex-row">
+                                            <div  class=" mb-1 me-2">
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                                <i class="bi bi-star-fill text-black"></i>
+                                            </div>
+                                            <div>
+                                                <span>189</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="mt-1 mb-0 text-muted small">
+                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, veniam!
+                                                Lorem, ipsum dolor sit amet consectetu.                                           
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="d-flex flex-row align-items-center mb-1">
+                                            <h4 class="mb-1 me-1">$ 3000.-</h4>
+                                            <span class="text-danger"><s>$ 3500.-</s></span>
+                                        </div>
+                                        <h6 class="text-success">Disponible en todas las plataformas</h6>
+                                        <div class="d-flex flex-column mt-4">
+                                            <button class="btn btn-primary btn-sm" type="button">Agregar al carrito</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-----------------------------footer--------------------->
+    <footer class="backColor text-white mt-2 pt-3 pb-3">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col md-3 col-lg-3 col-xl-3 mx-auto">
+                    <h5 class="mb-2 font-weight-bold text-warning">Nosotros</h5>
+                    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col md-3 col-lg-3 col-xl-3 mx-auto">
+                    <h5 class="mb-2 text-warning">Clases</h5>
+                    <p>
+                        <a href="./pages/clases.html" class="text-white" style="text-decoration: none;">Nivel Facil</a>
+                    </p>
+                    <p>
+                        <a href="./pages/clases.html" class="text-white" style="text-decoration: none;">Nivel Medio</a>
+                    </p>
+                    <p>
+                        <a href="./pages/clases.html" class="text-white" style="text-decoration: none;">Nivel Dificil</a>
+                    </p>
+                </div>
+                <div class="col md-3 col-lg-3 col-xl-3 mx-auto">
+                    <h5 class="mb-2 font-weight-bold text-warning">Links</h5>
+                    <p>
+                        <a href="./pages/sesion.html" class="text-white" style="text-decoration: none;">Log in</a>
+                    </p>
+                    <p>
+                        <a href="./pages/sesion.html" class="text-white" style="text-decoration: none;">Registrarse</a>
+                    </p>
+                    <p>
+                        <a href="./pages/carrito.html" class="text-white" style="text-decoration: none;">Carrito</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto">
+                    <h5 class="mb-2 font-weight-bold text-warning">Contacto</h5>
+                    <p>
+                        <i class="p-2 bi bi-envelope"></i>yogapocket@consultas.com
+                    </p>
+                </div>
+            <hr class="mb-4">
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p> Copyright © 2022 Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                        <div class="text-center text-md-right">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item"> 
+                                    <a href="" class="btn-floating btm-sm text-white" style="font-size: 20px;">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item"> 
+                                    <a href="" class="btn-floating btm-sm text-white" style="font-size: 20px;">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item"> 
+                                    <a href="" class="btn-floating btm-sm text-white" style="font-size: 20px;">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+            
+    </footer>
+    <!--script bs icons----------------------------->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <!--script bs------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

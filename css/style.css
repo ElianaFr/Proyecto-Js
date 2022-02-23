@@ -128,4 +128,12 @@ body {
   margin-right: -20px;
 }
 
+.borderDer {
+  border-right: dashed 1px white;
+}
+
+.colorBarck {
+  background-color: rgba(253, 253, 253, 0.15);
+}
+
 /*# sourceMappingURL=style.css.map */

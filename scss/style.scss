@@ -13,7 +13,7 @@ body{
 }
 //nav
 .navColor{
-    //background: linear-gradient(to right, rgb(153, 149, 145), rgb(252, 252, 252));
+    //background: linear-gradient(to right, rgb(143, 140, 138), rgb(252, 252, 252))!important;
     background: white;
     box-shadow: 0 0.5rem 0.5rem rgb(170, 165, 165);
 }
@@ -65,7 +65,6 @@ body{
     font-family: 'sonsie one';
     font-size: 60px;
     font-weight: 900;
-    //color: rgb(49, 68, 177)
     color: rgba(31, 58, 59, 0.884);
     
 }
@@ -118,4 +117,11 @@ body{
 }
 .controlNex{
     margin-right: -20px;
+}
+//  CLASES PRESENTACION 
+.borderDer{
+    border-right: dashed 1px white;
+}
+.colorBarck{
+    background-color: rgba(253, 253, 253, 0.15);
 }
