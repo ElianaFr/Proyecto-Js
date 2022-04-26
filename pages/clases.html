@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <!-- font family--------------------------------->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     
     <!-----------------------link css--------------->
+    
     <link rel="stylesheet" href="../css/style.css">
     <title>Yoga Pocket</title>
 </head>
@@ -43,15 +44,15 @@
                             <a class="nav-link text-dark mt-1 fontStyleMenu" href="../pages/clases.html">CLASES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fontStyleMenu" href="../pages/carrito.html">
-                                <box-icon type='solid' name='cart' class="mb-1"></box-icon>
-                                
-                            </a>
+                            <button id="boton-open">
+                                <i class="bi bi-bag-fill"></i>
+                                <span id="contadorCarrito">0</span>
+                            </button>
                         </li>
                         
                     </ul>
                         <a href="/pages/sesion.html" >
-                            <box-icon name='log-in-circle' class="mb-1" ></box-icon>
+                            <box-icon name='log-in-circle' class="mt-2" ></box-icon>
                         </a>
                         
                     </div>
@@ -84,7 +85,7 @@
                         <h2 class="textCarousel">YOGA POCKET</h2>
                         <p class="carouselTextSec">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <a href="../pages/clases.html" class="btn btn-primary boton">
-                            Comprar
+                            COMPRAR
                         </a>
                     </div>    
                 </div>
@@ -94,7 +95,7 @@
                         <h2 class="textCarousel">YOGA POCKET</h2>
                         <p class="carouselTextSec">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <a href="../pages/clases.html" class="btn  btn-primary boton">
-                            Comprar
+                            COMPRAR
                         </a>
                     </div>
                 </div>
@@ -131,150 +132,42 @@
             </div>
         </section>
         <!-------------------------packs para compra------------------>
-        <section>
-            <div class="container py-5">
-                <div class="row justify-content-center mb-1">
-                    <div class="col-md-12 col-xl-10">
-                        <div class="card shadow-6 border rounded-3" >
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                                        <div class="bg-image">
-                                            <img src="../img/pres3.jpg" class=" w-100 border rounded-2">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6 col-xl-6">
-                                        <h5>Pack de 10 posiciones- Nivel Inicial</h5>
-                                        <div class="d-flex flex-row">
-                                            <div  class=" mb-1 me-2">
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                            </div>
-                                            <div>
-                                                <span>289</span>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="mt-1 mb-0 text-muted small">
-                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, veniam!
-                                                Lorem, ipsum dolor sit amet consectetu.                                           
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                                        <div class="d-flex flex-row align-items-center mb-1">
-                                            <h4 class="mb-1 me-1">$ 1500.-</h4>
-                                            <span class="text-danger"><s>$ 2000.-</s></span>
-                                        </div>
-                                        <h6 class="text-success">Disponible en todas las plataformas</h6>
-                                        <div class="d-flex flex-column mt-4">
-                                            <button class="btn btn-primary btn-sm" type="button">Agregar al carrito</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-5">
-                <div class="row justify-content-center mb-1">
-                    <div class="col-md-12 col-xl-10">
-                        <div class="card shadow-5 border rounded-3" >
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                                        <div class="bg-image">
-                                            <img src="../img/presmedio.jpg" class=" w-100 border rounded-2">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6 col-xl-6">
-                                        <h5>Pack de 10 posiciones- Nivel Medio</h5>
-                                        <div class="d-flex flex-row">
-                                            <div  class=" mb-1 me-2">
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                            </div>
-                                            <div>
-                                                <span>308</span>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="mt-1 mb-0 text-muted small">
-                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, veniam!
-                                                Lorem, ipsum dolor sit amet consectetu.                                           
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                                        <div class="d-flex flex-row align-items-center mb-1">
-                                            <h4 class="mb-1 me-1">$ 2000.-</h4>
-                                            <span class="text-danger"><s>$ 2500.-</s></span>
-                                        </div>
-                                        <h6 class="text-success">Disponible en todas las plataformas</h6>
-                                        <div class="d-flex flex-column mt-4">
-                                            <button class="btn btn-primary btn-sm" type="button">Agregar al carrito</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container py-5">
-                <div class="row justify-content-center mb-1">
-                    <div class="col-md-12 col-xl-10">
-                        <div class="card shadow-5 border rounded-3" >
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                                        <div class="bg-image">
-                                            <img src="../img/pres5.jpg" class=" w-100 border rounded-2">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6 col-xl-6">
-                                        <h5>Pack de 10 posiciones- Nivel Experto</h5>
-                                        <div class="d-flex flex-row">
-                                            <div  class=" mb-1 me-2">
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                                <i class="bi bi-star-fill text-black"></i>
-                                            </div>
-                                            <div>
-                                                <span>189</span>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="mt-1 mb-0 text-muted small">
-                                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, veniam!
-                                                Lorem, ipsum dolor sit amet consectetu.                                           
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                                        <div class="d-flex flex-row align-items-center mb-1">
-                                            <h4 class="mb-1 me-1">$ 3000.-</h4>
-                                            <span class="text-danger"><s>$ 3500.-</s></span>
-                                        </div>
-                                        <h6 class="text-success">Disponible en todas las plataformas</h6>
-                                        <div class="d-flex flex-column mt-4">
-                                            <button class="btn btn-primary btn-sm" type="button">Agregar al carrito</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="seleccion">
+            <select id="selecNivel" class=" form-select-lg mb-3 " aria-label=".form-select-lg example">
+                <option value="todos" >Todos los packs</option>
+                <option value="INICIAL">Nivel Inicial</option>
+                <option value="MEDIO">Nivel Medio</option>
+                <option value="EXPERTO">Nivel Experto</option>
+            </select>
+        </div>
+        <section >
+            <div id="caja-productos" class="container py-5">
             </div>
         </section>
+<!-- resumen carrito-------------- -->
+        <div class="modal-contenedor" id="modal-contenedor" >
+            <div class="modal-carrito">
+                <h3 class="modal-tit">Carrito de compras</h3>
+                <hr class="mt-0" >
+                <button id="boton-cerrar" class="boton-cerrar">
+                    <i class="bi bi-x-circle-fill"></i>
+                </button>
+                <div id="caja-carrito">
+                    
+                </div>
+                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                
+                <div id="terminar" style="display: flex; justify-content: flex-end;">
+                </div>
+            </div>
+        </div>    
+    
+
+
     </main>
+
+
+    
 <!-----------------------------footer--------------------->
     <footer class="backColor text-white mt-2 pt-3 pb-3">
         <div class="container text-center text-md-left">
@@ -286,7 +179,7 @@
                 <div class="col md-3 col-lg-3 col-xl-3 mx-auto">
                     <h5 class="mb-2 text-warning">Clases</h5>
                     <p>
-                        <a href="./pages/clases.html" class="text-white" style="text-decoration: none;">Nivel Facil</a>
+                        <a href="./pages/clases.html" class="text-white" style="text-decoration: none;">Nivel Inicial</a>
                     </p>
                     <p>
                         <a href="./pages/clases.html" class="text-white" style="text-decoration: none;">Nivel Medio</a>
@@ -303,9 +196,7 @@
                     <p>
                         <a href="./pages/sesion.html" class="text-white" style="text-decoration: none;">Registrarse</a>
                     </p>
-                    <p>
-                        <a href="./pages/carrito.html" class="text-white" style="text-decoration: none;">Carrito</a>
-                    </p>
+                    
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto">
                     <h5 class="mb-2 font-weight-bold text-warning">Contacto</h5>
@@ -349,6 +240,9 @@
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <!--script bs------------------------>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <!-- script js  -->
+    <script src="../js/stock.js"></script>
+    <script src="../js/ventanaCarrito.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
