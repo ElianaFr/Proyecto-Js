@@ -120,12 +120,26 @@ function resumenCarrito(productoElegido) {
             botonEliminar.parentElement.remove()
             arrayCarrito = arrayCarrito.filter(item=> item.id != productoElegido.id)
             actualizarCarrito()
+            Swal.fire({
+                title: 'Aviso',
+                text: 'ARTICULO BORRADO CORRECTAMENTE',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              })
+            
             localStorage.setItem('arrayCarrito',JSON.stringify(arrayCarrito))
+
         }else{
             productoElegido.cantidad = productoElegido.cantidad - 1
             document.getElementById(`cantidad-${productoElegido.id}`).innerHTML =` <p id="cantidad-${productoElegido.id}">Cantidad: ${productoElegido.cantidad}   </p>`
-        
             actualizarCarrito()
+            Swal.fire({
+                title: 'Aviso',
+                text: 'ARTICULO BORRADO CORRECTAMENTE',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              })
+            
             localStorage.setItem('arrayCarrito',JSON.stringify(arrayCarrito))
             }
         
