@@ -1,4 +1,5 @@
 let arrayCarrito = [];
+let stock = [];
 
 const cajaProductos = document.getElementById('caja-productos');
 const cajaCarrito = document.getElementById('caja-carrito');
@@ -8,9 +9,26 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 const selecNivel = document.getElementById('selecNivel');
 
-console.log(stockProductos)
 
-listadoProductos(stockProductos);
+function cargarJson(){
+    fetch("../prod.json")
+        .then(function(res){
+            return res.json();
+        })
+        .then(function(data){
+            data.forEach(element =>{
+                stock.push(element)
+            })
+        })
+}
+
+cargarJson()
+console.log(stock)
+
+
+
+
+listadoProductos(stock);
 
 function listadoProductos(array){
     cajaProductos.innerHTML= ""
@@ -82,7 +100,7 @@ function agregarProducto(id) {
 
     }else{
 
-    let productoElegido = stockProductos.find(elemento => elemento.id == id)
+    let productoElegido = stock.find(elemento => elemento.id == id)
     productoElegido.cantidad = 1
     arrayCarrito.push(productoElegido)
     actualizarCarrito()
@@ -125,7 +143,7 @@ function resumenCarrito(productoElegido) {
                 text: 'ARTICULO BORRADO CORRECTAMENTE',
                 icon: 'success',
                 confirmButtonText: 'OK'
-              })
+            })
             
             localStorage.setItem('arrayCarrito',JSON.stringify(arrayCarrito))
 
@@ -139,7 +157,6 @@ function resumenCarrito(productoElegido) {
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
-            
             localStorage.setItem('arrayCarrito',JSON.stringify(arrayCarrito))
             }
         
@@ -175,9 +192,9 @@ recuperar()
 
 selecNivel.addEventListener('change',()=>{
     if(selecNivel.value =='todos' ){
-        listadoProductos(stockProductos)
+        listadoProductos(stock)
     }else{
-        listadoProductos(stockProductos.filter(elemento => elemento.nivel ==selecNivel.value))
+        listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
     }
 })
 
