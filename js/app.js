@@ -1,3 +1,5 @@
+// declaro las variables
+
 let arrayCarrito = [];
 let stock = [];
 
@@ -9,6 +11,7 @@ const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 const selecNivel = document.getElementById('selecNivel');
 
+// cargar datos de Json
 
 function cargarJson(){
     fetch("../prod.json")
@@ -27,8 +30,13 @@ console.log(stock)
 
 
 
+if (document.title === "Yoga Pocket-Clases") {
 
-listadoProductos(stock);
+    listadoProductos(stock);
+
+}
+
+
 
 function listadoProductos(array){
     cajaProductos.innerHTML= ""
@@ -39,14 +47,14 @@ function listadoProductos(array){
     div.innerHTML += `
     <div class="row justify-content-center m-4">
         <div class="col-md-12 col-xl-10">
-            <div  class="card shadow-6 border rounded-3 p-4" >
+            <div  class="card shadow-6 border rounded-3 p-3" >
                 <div class="row">
                     <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                         <div class="bg-image">
                             <img src=${item.img} class=" w-100 border rounded-2">
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="col-md-6 col-lg-6 col-xl-6 ">
                         <h5>Pack de 10 posiciones- ${item.nivel}</h5>
                         <div class="d-flex flex-row">
                             <div  class=" mb-1 me-2">
@@ -106,16 +114,17 @@ function agregarProducto(id) {
     actualizarCarrito()
     resumenCarrito(productoElegido)
     }
+    localStorage.setItem('arrayCarrito', JSON.stringify(arrayCarrito) )
 }
 
 function resumenCarrito(productoElegido) {
     let div = document.createElement('div')
-    div.className = 'productoEncarrito'
+    div.className = 'productoEnCarrito'
     div.innerHTML += `
-                    <p>Cantidad de posiciones ${productoElegido.posiciones}</p>
-                    <p>Nivel ${productoElegido.nivel} </p>  
-                    <p>Precio: $${productoElegido.precio}</p>
-                    <p id="cantidad-${productoElegido.id}">Cantidad: ${productoElegido.cantidad}   </p>
+                    <p class="itemsTxtCarrito"> Posiciones ${productoElegido.posiciones}</p>
+                    <p class="itemsTxtCarrito"> Nivel ${productoElegido.nivel} </p>  
+                    <p class="itemsTxtCarrito"> Precio: $ ${productoElegido.precio} </p>
+                    <p class="itemsTxtCarrito" id="cantidad-${productoElegido.id}">Cantidad: ${productoElegido.cantidad}</p>
                     <button id= "eliminar-${productoElegido.id}" class="boton-eliminar"><i class="bi bi-trash3"></i></button>
                     <hr class="mt-0" >
     `
@@ -125,13 +134,6 @@ function resumenCarrito(productoElegido) {
     let botonEliminar = document.getElementById(`eliminar-${productoElegido.id}`)
         botonEliminar.addEventListener('click',()=> {
             
-            // console.log(productoElegido.id)
-            // console.log(botonEliminar.parentElement)
-            // botonEliminar.parentElement.remove()
-            // arrayCarrito = arrayCarrito.filter(item => item.id!= productoElegido.id)
-            // // console.log(arrayCarrito)
-            // actualizarCarrito()
-
 
         if(productoElegido.cantidad == 1){
 
@@ -156,7 +158,7 @@ function resumenCarrito(productoElegido) {
                 text: 'ARTICULO BORRADO CORRECTAMENTE',
                 icon: 'success',
                 confirmButtonText: 'OK'
-              })
+            })
             localStorage.setItem('arrayCarrito',JSON.stringify(arrayCarrito))
             }
         
@@ -171,6 +173,8 @@ function actualizarCarrito(){
     precioTotal.innerText= arrayCarrito.reduce((acc,elemento)=> acc + (elemento.precio *elemento.cantidad),0)
 
 }
+
+//para recuperar si refresco la pagina
 
 function recuperar(){
     let recuperarDatos = JSON.parse(localStorage.getItem('arrayCarrito'))
@@ -189,13 +193,15 @@ recuperar()
 
 
 //buscar producto
-
-selecNivel.addEventListener('change',()=>{
-    if(selecNivel.value =='todos' ){
-        listadoProductos(stock)
-    }else{
-        listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
-    }
-})
+if (document.title === "Yoga Pocket-Clases"){
+    selecNivel.addEventListener('change',()=>{
+        if(selecNivel.value =='PACKS' ){
+            listadoProductos(stock)
+        }else{
+            listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
+        }
+    })
+    
+}
 
 

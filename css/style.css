@@ -88,9 +88,6 @@ body {
   color: white;
 }
 
-.boton {
-  font-weight: 900;
-}
 
 .tit {
   font-family: "sonsie one";
@@ -105,6 +102,8 @@ body {
 .backColor {
   background: #299999;
 }
+
+/* sector opiniones */
 
 .titOp {
   letter-spacing: 1px;
@@ -127,30 +126,16 @@ body {
 .controlNex {
   margin-right: -20px;
 }
-
+/* presentacion superior clases */
 .borderDer {
   border-right: dashed 1px white;
 }
-
+/* titulo carousel */
 .colorBack {
   background-color: rgba(253, 253, 253, 0.15);
 }
 
-.ajustePass {
-  margin-right: 75px;
-}
-
-.ajusteAp {
-  margin-right: 105px;
-}
-
-.ajustePa {
-  margin-right: 135px;
-}
-
-.ajusteSex {
-  margin-right: 130px;
-}
+/* icono carrito */
 .carrito{
   border-radius: 5px;
   padding: 5px;
@@ -165,7 +150,7 @@ body {
 }
 .fuenteCarrito{
   color: rgb(157, 157, 228);
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .fuenteTotal{
@@ -221,7 +206,7 @@ body {
   position: relative;
   background-color: white;
   border-radius: 5px ;
-  min-width: 400px;
+  min-width: 100px;
   padding: 20px;
   margin-top: 10%;
   box-shadow: 0 10px 10px rgba(59, 17, 17, 0.3);
@@ -234,7 +219,7 @@ body {
 }
 
 .modal-tit {
-  color: rgb(160, 108, 105);
+  color: rgb(132, 160, 105);
   padding-bottom: 10px;
   text-align: center;
 }
@@ -257,16 +242,25 @@ body {
   outline: none;
 }
 .productoEnCarrito {
-  border-left: 5px solid lightblue;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
-  margin: 5px 0;
+  border-left: 5px solid rgb(118, 207, 236);
+  border-right: 5px solid  rgb(118, 207, 236);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 20px;
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
+  font-size: small;
+
 }
 .productoEnCarrito:hover {
   border-left: 5px solid rgb(225, 76, 65);
+  border-right: 5px solid rgb(225, 76, 65);
+}
+.itemsTxtCarrito{
+  padding-right: 2px;
 }
 
 .precioProducto {
@@ -275,15 +269,268 @@ body {
 } 
 .boton-eliminar {
   background-color: white;
-  color: rgb(14, 13, 13);
+  color: rgb(9, 42, 149);
   border: none;
-  font-size: 15px;
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+  padding-top: 3px;
+  padding-left: 20px;
 }
 
 .boton-eliminar:hover {
   cursor: pointer;
+  color: #b86d71;
 }
 .boton-eliminar:focus {
   outline: none;
 }
 
+.precioProducto{
+  font-size: small;
+  background: #cfcaca;
+  width: 50%;
+  height: 30px;
+  padding-top: 5px;
+  padding-left: 4px;
+  border-radius: 5px;
+  font-weight: 400;
+}
+.botonesModal{
+  display: flex; 
+  justify-content: end;
+  
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/* ventana pago */
+/* datos del envio */
+.formulario__input-error{
+  font-size: 12px;
+  margin-bottom: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__input-error-activo{
+  display: block;
+}
+.formulario__password-error{
+  font-size: 12px;
+  margin-bottom: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__password-error-activo{
+  display: block;
+}
+.formulario__nombre-error{
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__nombre-error-activo{
+  
+  display: block;
+  
+}
+.formulario__apellido-error{
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__apellido-error-activo{
+  
+  display: block;
+}
+.formulario__direccion-error{
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__direccion-error-activo{
+  display: block;
+}
+.formulario__localidad-error{
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__localidad-error-activo{
+  display: block;
+}
+.formulario__Cp-error{
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color:#dd7373;
+  display: none;
+}
+.formulario__Cp-error-activo{
+  display: block;
+}
+
+
+
+
+
+.formularioTxtError{
+  font-size: 10px;
+  background: #dc9598;
+  border-radius: 8px;
+  padding: 4px;
+  display: none;
+}
+.formularioTxtError-activo{
+  display:block;
+}
+
+.formulario__msj-correcto{
+  font-size: 12px;
+  display: none;
+}
+.formulario__msj-correcto-activo{
+  display: block;
+}
+
+
+/* tarjeta */
+
+.container{
+  width: 80%;
+  max-width: 1000px;
+  padding: 60px 20px;
+  margin:auto ;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+
+} 
+/* estilos de la tarjeta delante*/
+.tarjeta{
+  width: 100%;
+  max-width: 500px;
+  position:relative;
+  color: white;
+  
+  z-index: 2; 
+}
+.tarjeta > div {
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 0 rgba(90, 116,148,0.3);
+
+}
+.frente{
+  width: 100%;
+  background: url(../img/bg-tarjeta/bg-tarjeta-01.jpg);
+  background-size: cover;
+}
+
+.frente .logoMarca{
+  text-align: right;
+  min-height: 50px; 
+}
+.frente .logoMarca img{
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+
+}
+.frente .chip {
+
+  width: 100%;
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+.codigo{
+  color: #ffffff;
+}
+.frente .grupo .label {
+  font-size: 16px;
+  color: #7d8994;
+  margin-bottom: 5px;
+}
+.frente .grupo .numero
+.frente .grupo .titular
+.frente .grupo .expiracion {
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+/* boton desplegar formulario tarjeta */
+.contenedor-btn .btn-abrir-form{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 20px;
+  position: relative;
+  border-radius: 100%;
+  top: -20px;
+  z-index: 3;
+  box-shadow: 5px 5px 5px rgba(8, 82, 220, 0.4);
+  border:none;
+  padding: 10px;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.contenedor-btn .btn-abrir-form:hover{
+  background: rgb(34, 114, 157);
+}
+.contenedor-btn .btn-abrir-form.active{
+  transform: rotate(180deg);
+}
+
+/* FORMULARIO CARGA TARJETA */
+
+.form-tarjeta{
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .3s ease-in;
+}
+.form-tarjeta.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  
+}
+
+.grupo-selec{
+  display: flex;
+  justify-content: space-between;
+}
+.form-tarjeta input{
+  text-transform: uppercase;
+}
+.form-control-ccv{
+  width: 17%;
+}
+.btnPagar{
+  width: 50%;
+  margin-left: 10px;
+}
+.titular{
+  text-transform: uppercase;
+}

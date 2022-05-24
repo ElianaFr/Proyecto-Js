@@ -1,9 +1,8 @@
 const ventanaAbrir = document.getElementById('boton-open')
 const ventanaCerrar = document.getElementById('boton-cerrar')
-
 const ventanaContenedor = document.getElementById('modal-contenedor')
 const ventanaCarrito= document.getElementById('modal-carrito')
-
+const btnComprar = document.getElementById('btnComprar')
 
 
 if (document.title === "Yoga Pocket-Clases") {
@@ -21,3 +20,7 @@ if (document.title === "Yoga Pocket-Clases") {
     })
     
 }
+
+btnComprar.addEventListener('click', ()=>{
+    location.href="pago.html"
+})
