@@ -416,14 +416,22 @@ body {
 
 } 
 /* estilos de la tarjeta delante*/
+
 .tarjeta{
   width: 100%;
   max-width: 500px;
   position:relative;
   color: white;
-  
   z-index: 2; 
 }
+.bloqueTarjeta{
+  display: none;
+}
+
+.bloqueTarjeta-activa{
+  display:block;
+}
+
 .tarjeta > div {
   padding: 30px;
   border-radius: 15px;
@@ -534,3 +542,14 @@ body {
 .titular{
   text-transform: uppercase;
 }
+
+/* FORMULARIO PAGO RESUMEN CARRITO */
+.totalPago{
+  font-weight: 900;
+  color: #37a56e;
+  text-align: center;
+  font-size: medium;
+  background: #eeebeb;
+
+}
+

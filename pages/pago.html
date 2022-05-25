@@ -63,9 +63,11 @@
         <div class="container ">
             <h3>Compra realizada</h3>
             <div class="container py-5" id="listadoCompra">
-
+                <div class="col-md-12 col-xl-10 ">
+                    <p class="shadow-6 border rounded-3  totalPago ">TOTAL: $ <span class="totalResumen"id="totalResumen">$0</span> </p>
+                </div>
             </div>
-
+            
         </div>
         <div class="container">
             <div class="envio">
@@ -161,13 +163,14 @@
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto formulario__grupo formulario__grupo-btn-cargar" >
                         
-                            <button class="btn btn-outline-success formulario__btn" type="submit">VERIFICAR</button>
+                            <button class="btn btn-outline-success formulario__btn" type="submit">CONTINUAR</button>
                             <p class="formulario__msj-correcto" id= "formulario__msj-correcto"><i class="bi bi-check-circle-fill"></i> Formulario correcto</p>
                         </div>
                 </form>
             </div>
         </div>
-        <div class="container">
+        
+        <div class="container bloqueTarjeta" id="bloqueTarjeta">
             <p>TOQUE LA FLECHA PARA DESPLEGAR</p>
             <!-- tarjeta -->
             <section class="tarjeta" id="tarjeta">
@@ -237,21 +240,22 @@
                     <label for="inputCCV" class="form-label pt-2">CVV</label>
                     <input type="text" id="inputCCV" class="form-control form-control-ccv" maxlength="3" autocomplete="off">
                 </div>
+                <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-primary  mt-4" id="btnPagar">PAGAR</button>
+                    <button type="button" class="btn btn-primary  mt-4" id="btnCancelar">CANCELAR</button>
                 
-
-
+                </div>
+                
+                
             </form>
-
-
-            <button type="submit" class="btn btn-primary btnPagar mt-4">PAGAR</button>
-        
+            
         </div>
     </main>
 
 
 
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<!-- <script src="../js/app.js"></script> -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/pago.js"></script>
     
 </body>

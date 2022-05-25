@@ -1,7 +1,8 @@
 // pagos
-//cargar compra
+//------------------------------cargar compra---------------------------------
 const arrayCompra=[];
 const listadoCompra= document.getElementById('listadoCompra')
+const totalResumen = document.getElementById('totalResumen')
 
 function cargarCarrito(){
     let cargaCarrito = JSON.parse(localStorage.getItem('arrayCarrito'));
@@ -15,7 +16,7 @@ function cargarCarrito(){
 cargarCarrito()
 console.log(arrayCompra)
 
-// resumen de la compra
+//------------------------ resumen de la compra-------------------
 function listadoProductos(array){
     // listadoCompra.innerHTML=""
     array.forEach(item =>{
@@ -57,19 +58,16 @@ function listadoProductos(array){
                             <h4 class="mb-1 me-1">$${item.precio}.-</h4>
                                                     </div>
                         <h6 class="text-success">Disponible en todas las plataformas</h6>
-                        
+                        <p >Cantidad : ${item.cantidad}</p>
                     </div>
                 </div>
+                
             </div>
         </div>
+        
     </div>
-        
-        
-        
         `
         listadoCompra.appendChild(div)
-        
-        
     })
 
 }
@@ -79,9 +77,10 @@ if (document.title === "Pago") {
 
 }
 
-
-
-
+function totalCarrito(){
+    totalResumen.innerText= arrayCompra.reduce((acc,elemento)=>acc+(elemento.precio * elemento.cantidad),0)
+}
+totalCarrito(arrayCompra)
 
 
 //---------------variables para trabajar con formulario envio---------
@@ -99,9 +98,9 @@ const expMes= document.querySelector('#tarjeta #expiracion .mes');
 const expYear= document.querySelector('#tarjeta #expiracion .year');
 const ccv = document.querySelector('#tarjeta .codigo');
 
-// variable para trabajar con el boton pagar
-const btnPagar = document.querySelector('#formEnvio #btnPagar');
-
+// variable para trabajar con el botones del final de la compra 
+const btnPagar = document.querySelector(' #btnPagar');
+const btnCancelar = document.querySelector(' #btnCancelar');
 
 
 //---------------------formulario envio----------------------- 
@@ -194,7 +193,7 @@ const validarFormulario = (e)=>{
                 document.querySelector('.formulario__direccion-error').classList.add('formulario__direccion-error-activo')
                 campos['direccion'] = false;
             }
-break;
+            break;
     
         case "localidad":
             if(expresiones.nombre.test(e.target.value)){
@@ -244,7 +243,12 @@ formEnvio.addEventListener('submit', (e)=>{
         document.getElementById('formulario__msj-correcto').classList.add('formulario__msj-correcto-activo');
         setTimeout(()=>{
             document.getElementById('formulario__msj-correcto').classList.remove('formulario__msj-correcto-activo');
-        },5000) 
+        },5000) ;
+    }
+    if(campos.nombre && campos.apellido && campos.correo && campos.password && campos.direccion && campos.localidad && campos.codigo){
+            document.getElementById('bloqueTarjeta').classList.add('bloqueTarjeta-activa');
+        
+    
     }
     else{
         document.getElementById('formularioTxtError').classList.add('formularioTxtError-activo');
@@ -257,8 +261,8 @@ formEnvio.addEventListener('submit', (e)=>{
 
 
 
-//input nombre 
-
+//----------------------------------------------------inputs caracteres admitidos
+//Nombre
 nombreEnvio.addEventListener('keyup', (e)=>{
     let inputNombre = e.target.value
     //para que solo pueda escribir letras
@@ -412,3 +416,34 @@ formTarjeta.inputCCV.addEventListener('keyup',()=>{
     ccv.textContent = formTarjeta.inputCCV.value ;
 
 })
+
+
+
+//*******************************************boton pagar**********/
+btnPagar.addEventListener("click",()=>{
+    Swal.fire({
+        title: 'Pago aprobado',
+        text: 'Enviaremos la informacion a su correo',
+        icon: 'success',
+        confirmButtonText: 'ACEPTAR',
+        
+    }).then(()=>{
+        location.href="../index.html"
+    })
+    localStorage.clear()
+});
+    
+
+
+btnCancelar.addEventListener("click",()=>{
+    Swal.fire({
+        title: 'Pago cancelado',
+        text: 'Será dirigido a la pagina de inicio',
+        icon: 'error',
+        confirmButtonText: 'ACEPTAR'
+    }).then(()=>{
+        
+        location.href="../index.html"
+    })
+    localStorage.clear()
+});

@@ -35,6 +35,17 @@ if (document.title === "Yoga Pocket-Clases") {
     listadoProductos(stock);
 
 }
+//buscar producto
+if (document.title === "Yoga Pocket-Clases"){
+    selecNivel.addEventListener('change',()=>{
+        if(selecNivel.value =='PACKS' ){
+            listadoProductos(stock)
+        }else{
+            listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
+        }
+    })
+    
+}
 
 
 
@@ -47,7 +58,7 @@ function listadoProductos(array){
     div.innerHTML += `
     <div class="row justify-content-center m-4">
         <div class="col-md-12 col-xl-10">
-            <div  class="card shadow-6 border rounded-3 p-3" >
+            <div  class="card shadow-6 border rounded-3 p-2" >
                 <div class="row">
                     <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                         <div class="bg-image">
@@ -92,7 +103,21 @@ function listadoProductos(array){
         //capturo el evento, el id del producto
         let botonAgregar = document.getElementById(`agregar${item.id}`)
         botonAgregar.addEventListener('click',()=>{
+            
             agregarProducto(item.id)
+            Toastify({
+                text: "Producto agregado",
+                duration: 1000,
+                newWindow: true,
+                close: true,
+                gravity: "bottom",
+                position: "right",
+                stopOnFocus: true, 
+                style: {
+                    background: "linear-gradient(to right, #50d4c4, #09474b)",
+                },
+                onClick: function(){} // Callback after click
+                }).showToast();
         })
     })
 }

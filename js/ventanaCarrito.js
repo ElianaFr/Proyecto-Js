@@ -20,7 +20,6 @@ if (document.title === "Yoga Pocket-Clases") {
     })
     
 }
-
-btnComprar.addEventListener('click', ()=>{
-    location.href="pago.html"
-})
+    btnComprar.addEventListener('click', ()=>{    
+        location.href="pago.html"
+    });
