@@ -1,4 +1,4 @@
-// pagos
+// ***************************************pagos********************************
 //------------------------------cargar compra---------------------------------
 const arrayCompra=[];
 const listadoCompra= document.getElementById('listadoCompra')
@@ -235,7 +235,7 @@ inputs.forEach((input)=> {
     
 });
 
-//para verificar si estan completos todos los campos
+//para verificar si estan completos todos los campos y poder acceder a la tarjeta
 
 formEnvio.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -261,7 +261,7 @@ formEnvio.addEventListener('submit', (e)=>{
 
 
 
-//----------------------------------------------------inputs caracteres admitidos
+//----------------------------------------------------inputs caracteres admitidos----------
 //Nombre
 nombreEnvio.addEventListener('keyup', (e)=>{
     let inputNombre = e.target.value
@@ -423,7 +423,7 @@ formTarjeta.inputCCV.addEventListener('keyup',()=>{
 btnPagar.addEventListener("click",()=>{
     Swal.fire({
         title: 'Pago aprobado',
-        text: 'Enviaremos la informacion a su correo',
+        html: '<span class="sweetAlert">Enviaremos la informacion a su correo</span>',
         icon: 'success',
         confirmButtonText: 'ACEPTAR',
         
@@ -437,10 +437,10 @@ btnPagar.addEventListener("click",()=>{
 
 btnCancelar.addEventListener("click",()=>{
     Swal.fire({
-        title: 'Pago cancelado',
-        text: 'Será dirigido a la pagina de inicio',
+        title: 'PAGO CANCELADO',
+        html: '<span class="sweetAlertCan">Será direccionado a la pagina principal</span>',
         icon: 'error',
-        confirmButtonText: 'ACEPTAR'
+        confirmButtonText: 'ACEPTAR',
     }).then(()=>{
         
         location.href="../index.html"

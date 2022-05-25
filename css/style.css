@@ -130,7 +130,7 @@ body {
 .borderDer {
   border-right: dashed 1px white;
 }
-/* titulo carousel */
+/* titulo carrousel */
 .colorBack {
   background-color: rgba(253, 253, 253, 0.15);
 }
@@ -163,7 +163,7 @@ body {
   text-align: center;
 }
 
-/* ventana modal */
+/* ventana modal boton+++++++++++++++++++++++++++++++ */
 #boton-open{
   border: none;
   color: rgb(5, 5, 5);
@@ -180,7 +180,7 @@ body {
 #boton-open:focus {
   outline: none;
 }
-/* ventana abierta */
+/*++++++++++++++++++++++++++++++++++++++++++++++ ventana modal +++++++++++++++++++++++++++++++++++*/
 .modal-contenedor {
   position: fixed;
   top: 0;
@@ -543,7 +543,7 @@ body {
   text-transform: uppercase;
 }
 
-/* FORMULARIO PAGO RESUMEN CARRITO */
+/* FORMULARIO PAGO --RESUMEN CARRITO */
 .totalPago{
   font-weight: 900;
   color: #37a56e;
@@ -553,3 +553,18 @@ body {
 
 }
 
+/* FORMULARIO PAGO- TARJETA BOTONES PAGO Y CANCELAR */
+.sweetAlert{
+  color:#18835f;
+  font-size: 14px;
+  font-weight: bold;
+}
+.sweetAlertCan{
+  color:#831818;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.botonStAlert{
+  background-color: #b86d71;
+}
