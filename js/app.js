@@ -35,17 +35,6 @@ if (document.title === "Yoga Pocket-Clases") {
     listadoProductos(stock);
 
 }
-//buscar producto
-if (document.title === "Yoga Pocket-Clases"){
-    selecNivel.addEventListener('change',()=>{
-        if(selecNivel.value =='PACKS' ){
-            listadoProductos(stock)
-        }else{
-            listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
-        }
-    })
-    
-}
 
 
 
