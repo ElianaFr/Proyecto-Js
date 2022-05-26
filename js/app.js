@@ -105,7 +105,7 @@ function listadoProductos(array){
                 style: {
                     background: "linear-gradient(to right, #50d4c4, #09474b)",
                 },
-                onClick: function(){} // Callback after click
+                onClick: function(){} 
                 }).showToast();
         })
     })

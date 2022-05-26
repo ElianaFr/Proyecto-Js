@@ -18,7 +18,7 @@ console.log(arrayCompra)
 
 //------------------------ resumen de la compra-------------------
 function listadoProductos(array){
-    // listadoCompra.innerHTML=""
+    
     array.forEach(item =>{
         
         let div =document.createElement('div')
