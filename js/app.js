@@ -28,10 +28,27 @@ function cargarJson(){
 cargarJson()
 console.log(stock)
 
+//buscar producto
+if (document.title === "Yoga Pocket-Clases"){
+    
+    selecNivel.addEventListener('change',()=>{
+        
+        if(selecNivel.value =='PACKS' ){
+            listadoProductos(stock)
+            
+        }else{
+            listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
+            
+        }
+    })
+    
+}
 
+
+//llamo a la funcion para mostrar los productos del array stock
 
 if (document.title === "Yoga Pocket-Clases") {
-
+    console.log(stock)
     listadoProductos(stock);
 
 }
@@ -39,6 +56,7 @@ if (document.title === "Yoga Pocket-Clases") {
 
 
 function listadoProductos(array){
+    console.log(array)
     cajaProductos.innerHTML= ""
     //por cada producto que tengo en el array declarado de stock se crea un bloque 
     array.forEach(item => {
@@ -204,18 +222,5 @@ function recuperar(){
 }
 
 recuperar()
-
-
-//buscar producto
-if (document.title === "Yoga Pocket-Clases"){
-    selecNivel.addEventListener('change',()=>{
-        if(selecNivel.value =='PACKS' ){
-            listadoProductos(stock)
-        }else{
-            listadoProductos(stock.filter(elemento => elemento.nivel ==selecNivel.value))
-        }
-    })
-    
-}
 
 
