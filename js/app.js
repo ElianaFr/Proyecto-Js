@@ -21,6 +21,7 @@ function cargarJson(){
         .then(function(data){
             data.forEach(element =>{
                 stock.push(element)
+                listadoProductos(stock)
             })
         })
 }
